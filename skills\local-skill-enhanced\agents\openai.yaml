@@ -1,0 +1,3 @@
+﻿display_name: Enhanced Local Skill
+short_description: Inspect the local workspace and run a small set of safe diagnostics.
+default_prompt: Use local-skill-enhanced to inspect the current workspace, show runtime information, or run safe local diagnostics.

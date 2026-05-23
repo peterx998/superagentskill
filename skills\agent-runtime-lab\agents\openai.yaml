@@ -1,0 +1,3 @@
+display_name: Agent Runtime Lab
+short_description: Inspect and harden local AI agent runtimes with safe scanning, logging, policy checks, prompt-injection analysis, and MCP audit.
+default_prompt: Use agent-runtime-lab to inspect my local agent runtime, scan an authorized path safely, check tool-call risk, analyze prompt-injection text defensively, or audit MCP configuration.
