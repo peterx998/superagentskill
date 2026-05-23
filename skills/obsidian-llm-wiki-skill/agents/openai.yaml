@@ -1,0 +1,3 @@
+display_name: Obsidian LLM Wiki Builder
+short_description: Build Obsidian knowledge notes, wiki links, tags, templates, and MOCs from reading material.
+default_prompt: Turn my source material into an Obsidian-ready linked knowledge note with metadata, tags, backlinks, and follow-up evergreen notes.

@@ -1,0 +1,12 @@
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db
+*token*
+*cookie*
+secrets.*

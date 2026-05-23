@@ -1,0 +1,3 @@
+display_name: Agency Agents
+short_description: Selects specialist Agency personas for role-based expert help.
+default_prompt: Use Agency Agents to choose the right specialist role for this task.
