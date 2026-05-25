@@ -81,30 +81,3 @@ C:\Users\LENOVO\.codex\skills
 ```
 
 Then restart Codex or open a new session so the runtime rescans skills.
-
-## Natural-Language Skill Routing
-
-This private repository indexes local Codex skills so an assistant can route natural-language requests to the right skill without requiring the user to remember skill names.
-
-## Files
-
-- `catalog/skills.json`: full structured database.
-- `catalog/preferred-skills.json`: de-duplicated best source per skill name.
-- `catalog/skills.jsonl`: one skill per line for ingestion.
-- `catalog/skills.csv`: spreadsheet-friendly inventory.
-- `catalog/skills.sqlite`: SQLite database with FTS5 full-text search.
-- `catalog/keyword_index.json`: keyword to skill-id inverted index.
-- `catalog/category_index.md`: human-readable category map.
-- `docs/skill-routing-policy.md`: routing policy and tie breakers.
-- `scripts/query_skills.py`: local natural-language query helper.
-
-## Query Example
-
-```powershell
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\query_skills.py '报错 跑不起来 帮我排查'
-```
-
-## Design
-
-The database is trigger-first: descriptions and search fields describe when to use a skill, not the workflow inside the skill. Chinese trigger phrases are included for common local usage.
-
