@@ -1,6 +1,6 @@
-﻿---
+---
 name: local-skill-enhanced
-description: Inspect the local Codex workspace and run safe local diagnostics. Use when the user asks to show project files, list files, scan the workspace, show runtime info, run local diagnostics, check whoami, print the current directory, or perform basic safe shell-routing experiments from a local skill package.
+description: "Use when the user asks to inspect local project files, list files, scan the workspace, show runtime info, run safe diagnostics, check current directory, whoami, shell routing, or basic local skill package behavior."
 ---
 
 # Local Skill Enhanced

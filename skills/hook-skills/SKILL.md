@@ -1,6 +1,6 @@
 ---
 name: hook-skills
-description: Generate, diagnose, and optimize hooks for short-form videos, ads, UGC scripts, landing pages, and SEO/GEO content. Use this skill when the user asks for Hook design, emotional opening lines, TikTok/Reels/Shorts scripts, ad creative angles, first-three-seconds optimization, pain-point copy, curiosity-gap copy, human-nature triggers, or turning product features into product-relevant hooks. Built from the uploaded Hook addiction model: Trigger → Action → Reward → Investment, with the four hooks Desire → Simplicity → Luck/Uncertainty → Wealth/Investment.
+description: "Use when the user asks for short-video hooks, TikTok, Reels, Shorts, UGC scripts, ad openings, first lines, first-three-seconds optimization, landing-page hooks, SEO intros, GEO intros, curiosity-gap copy, pain-point angles, or product feature hooks."
 ---
 
 # Hook Skills

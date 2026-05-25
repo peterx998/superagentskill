@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+description: "Use when something is broken, failing, crashing, hanging, flaky, slow, behaving unexpectedly, tests fail, commands error, setup does not work, or the user asks to debug, fix, diagnose, troubleshoot, inspect logs, 排查, 修复, 报错, 卡住, or find root cause."
 ---
 
 # Systematic Debugging

@@ -1,6 +1,6 @@
 ---
 name: skill-creator
-description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
+description: Use when creating, updating, designing, packaging, testing, or improving Codex skills, SKILL.md files, skill folders, specialized workflows, knowledge extensions, tool integrations, or trigger descriptions.
 metadata:
   short-description: Create or update a skill
 ---

@@ -1,6 +1,6 @@
 ---
 name: hyperframes-cli
-description: HyperFrames CLI dev loop — `npx hyperframes` for scaffolding (init), validation (lint, inspect), preview, render, and environment troubleshooting (doctor, browser, info, upgrade). Use when running any of these commands or troubleshooting the HyperFrames build/render environment. For asset preprocessing commands (`tts`, `transcribe`, `remove-background`), invoke the `hyperframes-media` skill instead.
+description: "Use when running or troubleshooting HyperFrames CLI commands such as init, lint, inspect, preview, render, doctor, browser, info, upgrade, build environment checks, or npx hyperframes dev loops."
 ---
 
 # HyperFrames CLI

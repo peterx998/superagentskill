@@ -1,6 +1,6 @@
 ---
 name: superpowers-gated-planning
-description: Use when a user asks for creative work, feature design, behavior changes, implementation planning, coding tasks with gated approvals, or work after phrases like "wait for confirmation" or "plan first".
+description: "Use when the user asks for planning before action, wait for confirmation, plan first, gated approvals, feature design, creative work, behavior changes, coding tasks with approval gates, or implementation planning."
 ---
 
 # Superpowers Gated Planning

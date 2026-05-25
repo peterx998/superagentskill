@@ -1,6 +1,6 @@
 ---
 name: karpathy-guidelines
-description: Use when writing, reviewing, debugging, or refactoring code and the task needs Andrej Karpathy-style coding discipline, minimal changes, clear assumptions, simplicity, surgical edits, or verifiable success criteria.
+description: "Use when writing, reviewing, debugging, or refactoring code where simplicity, minimal changes, clear assumptions, surgical edits, readability, verification, or Andrej Karpathy-style engineering discipline matters."
 ---
 
 # Karpathy Guidelines

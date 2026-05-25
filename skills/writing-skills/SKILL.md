@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: "Use when creating, editing, packaging, testing, verifying, or improving Codex skills, SKILL.md files, descriptions, trigger behavior, skill folders, skill docs, or skill deployment."
 ---
 
 # Writing Skills

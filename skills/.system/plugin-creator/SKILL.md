@@ -1,6 +1,6 @@
 ---
 name: plugin-creator
-description: Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, or generate or update marketplace entries for plugin ordering and availability metadata.
+description: Use when creating, scaffolding, validating, or updating Codex plugins, personal plugin folders, .codex-plugin/plugin.json, plugin manifests, marketplace entries, plugin ordering, or plugin availability metadata.
 ---
 
 # Plugin Creator

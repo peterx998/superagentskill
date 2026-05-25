@@ -1,6 +1,6 @@
 ---
 name: requesting-code-review
-description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+description: "Use when work is complete or near complete and the user wants review, asks to check implementation quality, verify requirements, find risks, review before merge, or inspect a major feature before shipping."
 ---
 
 # Requesting Code Review

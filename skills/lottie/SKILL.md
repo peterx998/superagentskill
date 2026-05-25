@@ -1,6 +1,6 @@
 ---
 name: lottie
-description: Lottie and dotLottie adapter patterns for HyperFrames. Use when embedding lottie-web JSON animations, .lottie files, @lottiefiles/dotlottie-web players, registering instances on window.__hfLottie, or making After Effects exports deterministic in HyperFrames.
+description: "Use when embedding Lottie or dotLottie animations in HyperFrames, using lottie-web, .lottie files, @lottiefiles/dotlottie-web, After Effects exports, window.__hfLottie, or deterministic Lottie rendering."
 ---
 
 # Lottie for HyperFrames

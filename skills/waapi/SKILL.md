@@ -1,6 +1,6 @@
 ---
 name: waapi
-description: Web Animations API adapter patterns for HyperFrames. Use when authoring element.animate() motion, Animation currentTime seeking, document.getAnimations(), KeyframeEffect timing, fill modes, or native browser animations that must render deterministically in HyperFrames.
+description: "Use when authoring Web Animations API motion, element.animate, Animation currentTime, KeyframeEffect timing, fill modes, document.getAnimations, native browser animations, or deterministic WAAPI rendering in HyperFrames."
 ---
 
 # Web Animations API for HyperFrames

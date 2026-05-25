@@ -1,6 +1,6 @@
 ---
 name: dispatching-parallel-agents
-description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
+description: "Use when a task has two or more independent workstreams, parallel subtasks, separate files, independent research tracks, or can be split among subagents without shared state or sequential dependency."
 ---
 
 # Dispatching Parallel Agents

@@ -1,6 +1,6 @@
 ---
 name: agency-agents
-description: Use when the user asks to activate, use, invoke, call, or consult an Agency agent or specialist role, including frontend developer, backend architect, UI designer, UX researcher, product manager, marketer, sales, finance, academic, game, spatial, support, testing, strategy, or other role-based expert personas from msitarzewski/agency-agents.
+description: "Use when the user asks to consult, activate, invoke, or roleplay a specialist agent such as frontend, backend, UI, UX, product, marketing, sales, finance, academic, game, spatial, support, testing, strategy, expert, persona, or agency role."
 ---
 
 # Agency Agents

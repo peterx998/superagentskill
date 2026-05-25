@@ -1,6 +1,6 @@
 ---
 name: agent-runtime-lab
-description: Study and harden local AI agent runtimes with safe workspace scanning, runtime diagnostics, tool-call logging, policy checks, prompt-injection detection, MCP audit, and authorized lab-target workflows. Use when the user asks to inspect Codex or Claude Code style agent behavior, shell hooks, tool routing, planner behavior, prompt injection, MCP security, apply_patch safety, repo poisoning, runtime logs, or authorized web security lab setup such as DVWA, Juice Shop, PortSwigger Labs, or local targets.
+description: "Use when the user asks to inspect, audit, harden, diagnose, or test local AI agent runtimes, Codex, Claude Code, MCP tools, shell hooks, tool routing, tool logs, prompt injection, repo poisoning, policy checks, or authorized security lab targets."
 ---
 
 # Agent Runtime Lab

@@ -1,6 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
+description: "Use when implementation is complete and the user needs to finish a branch, decide next integration steps, prepare merge or PR options, clean up work, summarize tests, or choose how to land completed changes."
 ---
 
 # Finishing a Development Branch

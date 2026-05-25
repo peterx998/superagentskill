@@ -1,6 +1,6 @@
 ---
 name: obsidian-llm-wiki-builder
-description: Use when the user wants to build, revise, or maintain a personal knowledge management workflow with Obsidian, LLM-assisted reading notes, wiki-style links, tags, templates, indexes, and evergreen notes.
+description: "Use when the user asks to organize Obsidian notes, personal knowledge management, LLM-assisted reading notes, wiki links, tags, templates, indexes, evergreen notes, vault structure, note cleanup, or knowledge workflows."
 ---
 
 # Obsidian LLM Wiki Builder
