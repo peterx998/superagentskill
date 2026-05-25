@@ -27,7 +27,7 @@ def main() -> int:
         try:
             rows = con.execute(
                 """
-                SELECT s.id, s.name, s.category, s.description, s.source_package, s.path, bm25(skills_fts) AS score
+                SELECT s.id, s.name, s.category, s.description, s.source_type, s.source_package, s.path, bm25(skills_fts) AS score
                 FROM skills_fts
                 JOIN skills s ON s.rowid = skills_fts.rowid
                 WHERE skills_fts MATCH ?
@@ -41,6 +41,7 @@ def main() -> int:
                     "name": row["name"],
                     "category": row["category"],
                     "description": row["description"],
+                    "source_type": row["source_type"],
                     "source_package": row["source_package"],
                     "path": row["path"],
                     "score": float(row["score"]),
@@ -84,6 +85,10 @@ def main() -> int:
             score += min(overlap, 12) * 0.6
         if r["name"] == "website-to-hyperframes" and any(x in query for x in ["网址", "网站", "网页", "链接", "URL", "url"]):
             score += 35.0
+        if r["name"] in {"skill-creator", "writing-skills"} and "skill" in query.lower() and any(x in query for x in ["创建", "新", "更新", "打包", "触发", "description"]):
+            score += 35.0
+        if r["name"] == "skill-installer" and "skill" in query.lower() and any(x in query for x in ["安装", "导入", "私有库", "github", "zip"]):
+            score += 35.0
         if r["name"] == "hyperframes-media" and any(x in query for x in ["字幕", "配音", "转录", "语音", "背景移除"]):
             score += 18.0
         if r["name"] == "hyperframes" and any(x in query for x in ["视频", "动画", "合成"]):
@@ -99,14 +104,15 @@ def main() -> int:
                     "name": r["name"],
                     "category": r["category"],
                     "description": r["description"],
+                    "source_type": r["source_type"],
                     "source_package": r["source_package"],
                     "path": r["path"],
                     "score": normalized,
                     "reason": "keyword",
                 }
 
-    source_priority = {"repository": 0, ".system": 1, "local": 2, "hyperframes": 3, "openai-developers": 4, "figma": 5}
-    sorted_rows = sorted(combined.values(), key=lambda x: (x["score"], source_priority.get(x["source_package"], 9)))
+    source_priority = {"repo-skill": 0, "repo-system": 1, "user-local": 2, "system-local": 3, "plugin-cache": 4}
+    sorted_rows = sorted(combined.values(), key=lambda x: (x["score"], source_priority.get(x.get("source_type", ""), 9), x["source_package"]))
     deduped = []
     seen_names = set()
     for row in sorted_rows:
@@ -120,7 +126,7 @@ def main() -> int:
     if not rows:
         rows = con.execute(
             """
-            SELECT name, category, description, source_package, path, 999 AS score
+            SELECT name, category, description, source_type, source_package, path, 999 AS score
             FROM skills
             WHERE search_text LIKE ?
             LIMIT 10

@@ -1,7 +1,7 @@
 # Superagent Skills Catalog
 
-Generated: `2026-05-25T15:57:52.071666+00:00`
-Total records: `142`
+Generated: `2026-05-25T16:06:20.827992+00:00`
+Total records: `143`
 Unique skill names: `86`
 
 ## How Matching Works
@@ -28,26 +28,50 @@ LIMIT 8;
   - 中文触发: MCP安全, 提示注入, 代理运行时, 工具调用, 策略检查, 安全审计
 - `agent-runtime-lab` (local): Use when the user asks to inspect, audit, harden, diagnose, or test local AI agent runtimes, Codex, Claude Code, MCP tools, shell hooks, tool routing, tool logs, prompt injection, repo poisoning, policy checks, or authorized security lab targets.
   - 中文触发: MCP安全, 提示注入, 代理运行时, 工具调用, 策略检查, 安全审计
-- `plugin-creator` (.system): Use when creating, scaffolding, validating, or updating Codex plugins, personal plugin folders, .codex-plugin/plugin.json, plugin manifests, marketplace entries, plugin ordering, or plugin availability metadata.
-  - 中文触发: MCP安全, 提示注入, 代理运行时, 工具调用, 策略检查, 安全审计
-- `plugin-creator` (.system): Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, or generate or update marketplace entries for plugin ordering and availability metadata.
-  - 中文触发: MCP安全, 提示注入, 代理运行时, 工具调用, 策略检查, 安全审计
 
 ### animation-rendering
 
+- `animejs` (repository): Use when writing Anime.js animations in HyperFrames, converting Anime.js examples, creating timelines, registering window.__hfAnime, making motion deterministic, or fixing Anime.js preview or render behavior.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `animejs` (local): Use when writing Anime.js animations in HyperFrames, converting Anime.js examples, creating timelines, registering window.__hfAnime, making motion deterministic, or fixing Anime.js preview or render behavior.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `css-animations` (repository): Use when authoring CSS keyframes, CSS-only animation, animation-delay timing, animation-fill-mode, play-state, transitions, or deterministic CSS motion for HyperFrames preview and rendering.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `css-animations` (local): Use when authoring CSS keyframes, CSS-only animation, animation-delay timing, animation-fill-mode, play-state, transitions, or deterministic CSS motion for HyperFrames preview and rendering.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-core` (repository): Use when the user asks for GSAP core animation, JavaScript animation, DOM or SVG tweens, gsap.to, from, fromTo, easing, duration, stagger, defaults, matchMedia, responsive animation, reduced motion, or framework-agnostic animation.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-core` (local): Use when the user asks for GSAP core animation, JavaScript animation, DOM or SVG tweens, gsap.to, from, fromTo, easing, duration, stagger, defaults, matchMedia, responsive animation, reduced motion, or framework-agnostic animation.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-frameworks` (repository): Use when using GSAP with Vue, Nuxt, Svelte, SvelteKit, onMounted, onMount, onDestroy, framework lifecycle cleanup, scoped selectors, or non-React component animation.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-frameworks` (local): Use when using GSAP with Vue, Nuxt, Svelte, SvelteKit, onMounted, onMount, onDestroy, framework lifecycle cleanup, scoped selectors, or non-React component animation.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `gsap-performance` (repository): Use when optimizing GSAP performance, animation jank, FPS, smoothness, 60fps, layout thrashing, transforms, will-change, batching, heavy scroll animation, or stuttering motion.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `gsap-performance` (local): Use when optimizing GSAP performance, animation jank, FPS, smoothness, 60fps, layout thrashing, transforms, will-change, batching, heavy scroll animation, or stuttering motion.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-plugins` (repository): Use when the user asks about GSAP plugins such as ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG drawing, physics plugins, CustomEase, CustomWiggle, CustomBounce, or plugin registration.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-plugins` (local): Use when the user asks about GSAP plugins such as ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG drawing, physics plugins, CustomEase, CustomWiggle, CustomBounce, or plugin registration.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-react` (repository): Use when using GSAP with React or Next.js, useGSAP, refs, gsap.context, component cleanup, React animation hooks, or React-specific animation lifecycle issues.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-react` (local): Use when using GSAP with React or Next.js, useGSAP, refs, gsap.context, component cleanup, React animation hooks, or React-specific animation lifecycle issues.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-scrolltrigger` (repository): Use when building scroll-based animation with GSAP ScrollTrigger, parallax, pinning, scrub, scroll triggers, scroll-driven scenes, pinned sections, reveal-on-scroll, or ScrollTrigger debugging.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `gsap-scrolltrigger` (local): Use when building scroll-based animation with GSAP ScrollTrigger, parallax, pinning, scrub, scroll triggers, scroll-driven scenes, pinned sections, reveal-on-scroll, or ScrollTrigger debugging.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `gsap-utils` (repository): Use when using gsap.utils, clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe, helper utilities, value mapping, or utility-driven animation logic.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `gsap-utils` (local): Use when using gsap.utils, clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe, helper utilities, value mapping, or utility-driven animation logic.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `svg-assembly-animator` (local): 为 SVG 矢量图创建充满“力量感”与“速度感”的零件组装动画，并支持一键导出 30fps 的透明背景序列帧。适用于需要将静态 SVG 转换为可用于视频剪辑（如 AE/PR）的透明素材场景。
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `tailwind` (repository): Use when using Tailwind CSS v4 in HyperFrames, hyperframes init --tailwind, Tailwind utility classes, CSS-first theme tokens, browser runtime Tailwind, v3 vs v4 syntax issues, or compiling Tailwind for compositions.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `tailwind` (local): Use when using Tailwind CSS v4 in HyperFrames, hyperframes init --tailwind, Tailwind utility classes, CSS-first theme tokens, browser runtime Tailwind, v3 vs v4 syntax issues, or compiling Tailwind for compositions.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `three` (repository): Use when creating Three.js, WebGL, 3D scenes, canvas layers, cameras, shaders, AnimationMixer timelines, deterministic renders, or HyperFrames hf-seek driven 3D animation.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
@@ -87,10 +111,6 @@ LIMIT 8;
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `agents-sdk` (openai-developers): Build, run, deploy, and evaluate OpenAI Agents SDK apps from Codex. Use when the user asks to create or adapt an Agents SDK app, build from a prompt or Codex thread, prepare a runnable agent prototype, add a focused eval harness, or deploy locally through the Agents SDK Deployment Manager.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `animejs` (repository): Use when writing Anime.js animations in HyperFrames, converting Anime.js examples, creating timelines, registering window.__hfAnime, making motion deterministic, or fixing Anime.js preview or render behavior.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `animejs` (local): Use when writing Anime.js animations in HyperFrames, converting Anime.js examples, creating timelines, registering window.__hfAnime, making motion deterministic, or fixing Anime.js preview or render behavior.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `chatgpt-app-submission` (openai-developers): Inspect a ChatGPT Apps MCP server codebase and generate chatgpt-app-submission.json with app info suggestions, tool hint justifications, test cases, and negative test cases, then report review-check findings and outputSchema warnings for submission review.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `dispatching-parallel-agents` (repository): Use when a task has two or more independent workstreams, parallel subtasks, separate files, independent research tracks, or can be split among subagents without shared state or sequential dependency.
@@ -109,18 +129,6 @@ LIMIT 8;
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `gsap` (hyperframes): GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `gsap-core` (repository): Use when the user asks for GSAP core animation, JavaScript animation, DOM or SVG tweens, gsap.to, from, fromTo, easing, duration, stagger, defaults, matchMedia, responsive animation, reduced motion, or framework-agnostic animation.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `gsap-core` (local): Use when the user asks for GSAP core animation, JavaScript animation, DOM or SVG tweens, gsap.to, from, fromTo, easing, duration, stagger, defaults, matchMedia, responsive animation, reduced motion, or framework-agnostic animation.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `gsap-frameworks` (repository): Use when using GSAP with Vue, Nuxt, Svelte, SvelteKit, onMounted, onMount, onDestroy, framework lifecycle cleanup, scoped selectors, or non-React component animation.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `gsap-frameworks` (local): Use when using GSAP with Vue, Nuxt, Svelte, SvelteKit, onMounted, onMount, onDestroy, framework lifecycle cleanup, scoped selectors, or non-React component animation.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `gsap-scrolltrigger` (repository): Use when building scroll-based animation with GSAP ScrollTrigger, parallax, pinning, scrub, scroll triggers, scroll-driven scenes, pinned sections, reveal-on-scroll, or ScrollTrigger debugging.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `gsap-scrolltrigger` (local): Use when building scroll-based animation with GSAP ScrollTrigger, parallax, pinning, scrub, scroll triggers, scroll-driven scenes, pinned sections, reveal-on-scroll, or ScrollTrigger debugging.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `karpathy-guidelines` (repository): Use when writing, reviewing, debugging, or refactoring code where simplicity, minimal changes, clear assumptions, surgical edits, readability, verification, or Andrej Karpathy-style engineering discipline matters.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `karpathy-guidelines` (local): Use when writing, reviewing, debugging, or refactoring code where simplicity, minimal changes, clear assumptions, surgical edits, readability, verification, or Andrej Karpathy-style engineering discipline matters.
@@ -138,8 +146,6 @@ LIMIT 8;
 - `requesting-code-review` (repository): Use when work is complete or near complete and the user wants review, asks to check implementation quality, verify requirements, find risks, review before merge, or inspect a major feature before shipping.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `requesting-code-review` (local): Use when work is complete or near complete and the user wants review, asks to check implementation quality, verify requirements, find risks, review before merge, or inspect a major feature before shipping.
-  - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
-- `skill-router` (local): Use when choosing which local Codex skill should apply, when many installed skills may match, when routing a request by intent, or when the assistant should select the right process, coding, content, video, animation, document, agent, or security skill.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
 - `systematic-debugging` (repository): Use when something is broken, failing, crashing, hanging, flaky, slow, behaving unexpectedly, tests fail, commands error, setup does not work, or the user asks to debug, fix, diagnose, troubleshoot, inspect logs, 排查, 修复, 报错, 卡住, or find root cause.
   - 中文触发: 报错, 修复, 排查, 跑不起来, 失败, 崩溃
@@ -262,9 +268,9 @@ LIMIT 8;
   - 中文触发: 规划, 计划, 先想方案, 设计一下, 按计划执行, 拆任务
 - `openai-api-troubleshooting` (openai-developers): Use when an OpenAI API request fails and Codex needs to classify the likely cause, explain the next step, and route to the right follow-up. Covers common runtime failures such as blocked outbound network access, invalid credentials, exhausted API quota or credits, rate limits, and model, project, or organization access issues; delegate key provisioning to openai-platform-api-key and current documentation lookups to openai-docs.
   - 中文触发: 规划, 计划, 先想方案, 设计一下, 按计划执行, 拆任务
-- `skill-creator` (.system): Use when creating, updating, designing, packaging, testing, or improving Codex skills, SKILL.md files, skill folders, specialized workflows, knowledge extensions, tool integrations, or trigger descriptions.
+- `skill-router` (repository): Use when choosing which local Codex skill should apply, when many installed skills may match, when routing a request by intent, or when the assistant should select the right process, coding, content, video, animation, document, agent, or security skill.
   - 中文触发: 规划, 计划, 先想方案, 设计一下, 按计划执行, 拆任务
-- `skill-creator` (.system): Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
+- `skill-router` (local): Use when choosing which local Codex skill should apply, when many installed skills may match, when routing a request by intent, or when the assistant should select the right process, coding, content, video, animation, document, agent, or security skill.
   - 中文触发: 规划, 计划, 先想方案, 设计一下, 按计划执行, 拆任务
 - `subagent-driven-development` (repository): Use when executing an implementation plan that has independent tasks in the current session, parallelizable steps, separable modules, or work that benefits from subagent task execution and review.
   - 中文触发: 规划, 计划, 先想方案, 设计一下, 按计划执行, 拆任务
@@ -301,14 +307,6 @@ LIMIT 8;
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `documents` (openai-primary-runtime): Create, edit, redline, and comment on `.docx`, Word, and Google Docs-targeted document artifacts inside the container, with a strict render-and-verify workflow. Use `render_docx.py` to generate page PNGs (and optional PDF) for visual QA, then iterate until layout is flawless before delivering the final document.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
-- `gsap-plugins` (repository): Use when the user asks about GSAP plugins such as ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG drawing, physics plugins, CustomEase, CustomWiggle, CustomBounce, or plugin registration.
-  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
-- `gsap-plugins` (local): Use when the user asks about GSAP plugins such as ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG drawing, physics plugins, CustomEase, CustomWiggle, CustomBounce, or plugin registration.
-  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
-- `gsap-react` (repository): Use when using GSAP with React or Next.js, useGSAP, refs, gsap.context, component cleanup, React animation hooks, or React-specific animation lifecycle issues.
-  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
-- `gsap-react` (local): Use when using GSAP with React or Next.js, useGSAP, refs, gsap.context, component cleanup, React animation hooks, or React-specific animation lifecycle issues.
-  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `imagegen` (.system): Use when generating or editing raster images, AI-created bitmap visuals, photos, illustrations, textures, sprites, mockups, transparent cutouts, image variants, or reference-based visual assets rather than SVG, vector, code-native, HTML, CSS, or canvas visuals.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `imagegen` (.system): Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.
@@ -319,17 +317,21 @@ LIMIT 8;
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `local-skill-enhanced` (local): Use when the user asks to inspect local project files, list files, scan the workspace, show runtime info, run safe diagnostics, check current directory, whoami, shell routing, or basic local skill package behavior.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
+- `plugin-creator` (.system): Use when creating, scaffolding, validating, or updating Codex plugins, personal plugin folders, .codex-plugin/plugin.json, plugin manifests, marketplace entries, plugin ordering, or plugin availability metadata.
+  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
+- `plugin-creator` (.system): Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, or generate or update marketplace entries for plugin ordering and availability metadata.
+  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `remotion-best-practices` (local): Best practices for Remotion - Video creation in React
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `ruler-progress-render` (local): Clone or update https://github.com/sxhzju/ruler-progress-animator and render a ruler progress video with default parameters. Use when users ask for requests like "绘制个尺子进度条", "做个尺子进度动画", "渲染 ruler progress", or ask to export the default demo video from this project.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
+- `skill-creator` (.system): Use when creating, updating, designing, packaging, testing, or improving Codex skills, SKILL.md files, skill folders, specialized workflows, knowledge extensions, tool integrations, or trigger descriptions.
+  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
+- `skill-creator` (.system): Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
+  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `skill-installer` (.system): Use when listing, installing, importing, or updating Codex skills from curated sources, GitHub repositories, private repos, zip packages, local folders, or into $CODEX_HOME/skills.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `skill-installer` (.system): Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
-  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
-- `tailwind` (repository): Use when using Tailwind CSS v4 in HyperFrames, hyperframes init --tailwind, Tailwind utility classes, CSS-first theme tokens, browser runtime Tailwind, v3 vs v4 syntax issues, or compiling Tailwind for compositions.
-  - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
-- `tailwind` (local): Use when using Tailwind CSS v4 in HyperFrames, hyperframes init --tailwind, Tailwind utility classes, CSS-first theme tokens, browser runtime Tailwind, v3 vs v4 syntax issues, or compiling Tailwind for compositions.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
 - `threejs-earth-render` (local): Clone or update https://github.com/vibe-motion/threejs-earth and render the Three.js Earth route animation with Puppeteer frame capture. Use when users ask for 三维地球航线动画, Three.js Earth, 地球飞线, globe route animation, or exporting an Earth GIF/MP4/PNG sequence.
   - 中文触发: 创建技能, 修改技能, 技能触发, 本地诊断, 扫描目录, 运行环境
