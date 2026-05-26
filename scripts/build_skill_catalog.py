@@ -61,6 +61,16 @@ EXTRA_TERMS = {
     "skill-creator": ["create skill", "new skill", "创建skill", "创建技能", "更新skill", "技能打包"],
     "skill-installer": ["install skill", "import skill", "安装skill", "安装技能", "私有库skill", "zip安装"],
     "writing-skills": ["skill description", "trigger behavior", "SKILL.md", "技能触发", "触发描述"],
+    "claude-typer": ["Claude typing animation", "prompt typing video", "提示词打字机", "Claude打字动画"],
+    "light-spotlight-render": ["spotlight text reveal", "light logo reveal", "聚光灯扫字", "发光文字揭示"],
+    "procedural-fish-render": ["procedural fish", "Remotion fish", "程序鱼", "程序鱼视频"],
+    "remotion-3d-ticker": ["3D ticker", "vertical ticker", "photo wall", "3D照片滚动墙", "3D相册瀑布流"],
+    "remotion-best-practices": ["Remotion", "video in React", "Remotion best practices", "Remotion视频"],
+    "remotion-vinyl-player": ["vinyl player", "record player", "music player video", "黑胶唱片", "音乐播放器"],
+    "ruler-progress-render": ["ruler progress", "progress animation", "尺子进度条", "尺子进度动画"],
+    "svg-assembly-animator": ["SVG assembly", "transparent frame export", "SVG组装动画", "透明序列帧"],
+    "threejs-earth-render": ["Three.js Earth", "globe route animation", "三维地球航线", "地球飞线"],
+    "wechat-2d-render": ["WeChat 2D", "chat motion video", "微信聊天动画", "微信视频消息动效"],
 }
 
 FORCED_CATEGORY = {
@@ -76,6 +86,16 @@ FORCED_CATEGORY = {
     "gsap-plugins": "animation-rendering",
     "gsap-react": "animation-rendering",
     "tailwind": "animation-rendering",
+    "claude-typer": "hyperframes-video",
+    "procedural-fish-render": "hyperframes-video",
+    "remotion-3d-ticker": "hyperframes-video",
+    "remotion-best-practices": "hyperframes-video",
+    "remotion-vinyl-player": "hyperframes-video",
+    "ruler-progress-render": "hyperframes-video",
+    "wechat-2d-render": "hyperframes-video",
+    "light-spotlight-render": "animation-rendering",
+    "svg-assembly-animator": "animation-rendering",
+    "threejs-earth-render": "animation-rendering",
 }
 
 

@@ -1,8 +1,8 @@
 # Superagent Skills Catalog
 
-Generated: `2026-05-26T14:08:52.478041+00:00`
-Total records: `50`
-Unique skill names: `50`
+Generated: `2026-05-26T15:01:09.405501+00:00`
+Total records: `60`
+Unique skill names: `60`
 
 ## How Matching Works
 
@@ -47,9 +47,15 @@ LIMIT 8;
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `gsap-utils` (repository): Use when using gsap.utils, clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe, helper utilities, value mapping, or utility-driven animation logic.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `light-spotlight-render` (repository): Generate a swinging spotlight text-reveal HTML animation with configurable text, swing angle, lamp scale, glow, and colors. Use when users ask for 聚光灯扫字动画, spotlight text reveal, light logo reveal, 发光文字揭示动画, or want a reusable HTML animation instead of a static image.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `svg-assembly-animator` (repository): 为 SVG 矢量图创建充满“力量感”与“速度感”的零件组装动画，并支持一键导出 30fps 的透明背景序列帧。适用于需要将静态 SVG 转换为可用于视频剪辑（如 AE/PR）的透明素材场景。
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `tailwind` (repository): Use when using Tailwind CSS v4 in HyperFrames, hyperframes init --tailwind, Tailwind utility classes, CSS-first theme tokens, browser runtime Tailwind, v3 vs v4 syntax issues, or compiling Tailwind for compositions.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `three` (repository): Use when creating Three.js, WebGL, 3D scenes, canvas layers, cameras, shaders, AnimationMixer timelines, deterministic renders, or HyperFrames hf-seek driven 3D animation.
+  - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
+- `threejs-earth-render` (repository): Clone or update https://github.com/vibe-motion/threejs-earth and render the Three.js Earth route animation with Puppeteer frame capture. Use when users ask for 三维地球航线动画, Three.js Earth, 地球飞线, globe route animation, or exporting an Earth GIF/MP4/PNG sequence.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
 - `typegpu` (repository): Use when creating TypeGPU or raw WebGPU visuals, WGSL shaders, compute pipelines, GPU particles, liquid glass effects, navigator.gpu canvas layers, or HyperFrames hf-seek driven WebGPU scenes.
   - 中文触发: 动画, 滚动动画, 三维, WebGL, WebGPU, 粒子
@@ -90,6 +96,8 @@ LIMIT 8;
 
 ### hyperframes-video
 
+- `claude-typer` (repository): Render a Claude-style prompt typing animation video by calling Remotion CLI against the remote site https://www.laosunwendao.com. Use when the user asks for "做一个 claude 的提示词打字机动画", "做 Claude 打字动画", "创建提示词动画", or similar requests that convert a text prompt into a typing-animation video.
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
 - `contribute-catalog` (repository): Use when the user explicitly wants to contribute a HyperFrames registry block, caption style, VFX block, transition, lower third, text effect, overlay, snippet, catalog component, upstream PR, or public registry item.
   - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
 - `gsap` (repository): Use when writing GSAP animations in HyperFrames, using gsap.to, from, fromTo, timelines, easing, stagger, labels, nesting, playback, transforms, quickTo, or deterministic GSAP motion for video compositions.
@@ -104,7 +112,19 @@ LIMIT 8;
   - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
 - `lottie` (repository): Use when embedding Lottie or dotLottie animations in HyperFrames, using lottie-web, .lottie files, @lottiefiles/dotlottie-web, After Effects exports, window.__hfLottie, or deterministic Lottie rendering.
   - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
+- `procedural-fish-render` (repository): Clone or update https://github.com/vibe-motion/procedural-fish and render procedural-fish animation to a video using the project's own render command. Use when the user asks to render 程序鱼/procedural fish, export a 程序鱼视频, or run procedural-fish Remotion rendering.
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
+- `remotion-3d-ticker` (repository): Creates infinite 3D vertical scrolling ticker animations in Remotion. Use when you need to build a parallax gallery, infinite image scroll, multi-column continuous vertical scrolling effect, or a 3D photo wall (3D照片滚动墙 / 3D相册瀑布流).
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
+- `remotion-best-practices` (repository): Best practices for Remotion - Video creation in React
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
+- `remotion-vinyl-player` (repository): Creates an elegant, realistic Vinyl Record Player animation component for Remotion. Use when needing a music player UI, album showcase, or audio-visualizer interface in a video. (Keywords: 黑胶唱片, 音乐播放器, 唱片机, 专辑展示, 音频可视化)
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
+- `ruler-progress-render` (repository): Clone or update https://github.com/sxhzju/ruler-progress-animator and render a ruler progress video with default parameters. Use when users ask for requests like "绘制个尺子进度条", "做个尺子进度动画", "渲染 ruler progress", or ask to export the default demo video from this project.
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
 - `website-to-hyperframes` (repository): Use when the user provides a website URL or link and wants a HyperFrames video, promo, product tour, social ad, launch video, capture, website-to-video conversion, or says turn this site into video content.
+  - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
+- `wechat-2d-render` (repository): Clone or update https://github.com/sxhzju/wechat-2d and render the default WeChat-style 2D chat motion video with Remotion. Use when users ask for 微信聊天动画, wechat 2d chat render, 微信视频消息动效, or exporting the default demo from the wechat-2d project.
   - 中文触发: 做视频, 字幕, 配音, 视频合成, 网页转视频, 网址做成视频
 
 ### openai-api-apps

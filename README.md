@@ -102,7 +102,7 @@ If you want to preserve a private expanded catalog with local/plugin-cache recor
 
 ### Catalog 公开边界
 
-公开版 `catalog/` 默认应该只记录仓库内的 skills 来源。以前私有版本可能有 143 条记录，是因为同时扫描了本机已安装 skills 和 plugin-cache；当前公开整理后的 catalog 可能只有仓库来源记录，例如 50 条。这不是普通意义上的数据丢失，而是为了避免把本机路径、plugin-cache、私有 skill 或机器特定信息带进公开 PR。
+公开版 `catalog/` 默认应该只记录仓库内的 skills 来源。以前私有版本可能有 143 条记录，是因为同时扫描了本机已安装 skills 和 plugin-cache；当前公开整理后的 catalog 只保留仓库来源记录，例如 60 条。这不是普通意义上的数据丢失，而是为了避免把本机路径、plugin-cache、私有 skill 或机器特定信息带进公开 PR。
 
 合并前建议重点检查：
 
@@ -175,8 +175,8 @@ This roster is generated from the existing classification docs and README conten
 | Skill Management | Skill 创建、安装与维护 | Creating, installing, packaging, improving, indexing, and maintaining Codex skills. | `writing-skills`, `skill-creator`, `skill-installer`, `plugin-creator`, `local-skill-enhanced` |
 | Agent Runtime and Safety | Agent 运行时与安全 | MCP, prompt injection, runtime behavior, shell/tool safety, and security-oriented checks. | `agent-runtime-lab` |
 | Content, Marketing, and Knowledge Work | 内容、营销与知识库 | Hooks, UGC scripts, specialist roles, Obsidian notes, and knowledge workflows. | `hook-skills`, `obsidian-llm-wiki-skill`, `agency-agents` |
-| HyperFrames Video | HyperFrames 视频制作 | HTML video, captions, voiceover, website-to-video, registry components, and Remotion migration. | `hyperframes`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `website-to-hyperframes`, `remotion-to-hyperframes`, `contribute-catalog` |
-| Animation and Rendering | 动画与渲染 | GSAP, Three.js, WebGPU, Lottie, Anime.js, CSS animation, WAAPI, and motion performance. | `gsap`, `gsap-core`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-plugins`, `gsap-performance`, `three`, `typegpu`, `lottie`, `animejs`, `css-animations`, `waapi`, `tailwind` |
+| HyperFrames Video | HyperFrames 视频制作 | HTML video, captions, voiceover, website-to-video, registry components, Remotion migration, and reusable video render helpers. | `hyperframes`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `website-to-hyperframes`, `remotion-to-hyperframes`, `remotion-best-practices`, `claude-typer`, `procedural-fish-render`, `remotion-3d-ticker`, `remotion-vinyl-player`, `ruler-progress-render`, `wechat-2d-render`, `contribute-catalog` |
+| Animation and Rendering | 动画与渲染 | GSAP, Three.js, WebGPU, Lottie, Anime.js, CSS animation, WAAPI, SVG assembly, spotlight reveals, globe routes, and motion performance. | `gsap`, `gsap-core`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-plugins`, `gsap-performance`, `three`, `threejs-earth-render`, `svg-assembly-animator`, `light-spotlight-render`, `typegpu`, `lottie`, `animejs`, `css-animations`, `waapi`, `tailwind` |
 | System and OpenAI | 系统与 OpenAI | System-level image generation and OpenAI docs/API guidance. | `imagegen`, `openai-docs` |
 
 ## Usage with Codex

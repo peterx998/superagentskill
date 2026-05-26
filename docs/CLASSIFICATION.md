@@ -102,6 +102,13 @@ Use when creating HTML-based videos, captions, voiceover, website-to-video, or H
 | `hyperframes-cli` | init/lint/preview/render 等 CLI 流程 | npx hyperframes, render, preview |
 | `hyperframes-registry` | 安装和接入 registry blocks/components | hyperframes add, registry |
 | `remotion-to-hyperframes` | 明确要求从 Remotion 迁移到 HyperFrames | port Remotion, migrate Remotion |
+| `remotion-best-practices` | Remotion/React 视频制作最佳实践 | Remotion, video in React, Remotion 视频 |
+| `claude-typer` | Claude 风格提示词打字机视频 | Claude typing animation, 提示词打字机 |
+| `procedural-fish-render` | 渲染 procedural fish 动画视频 | procedural fish, 程序鱼视频 |
+| `remotion-3d-ticker` | 3D 照片滚动墙/竖向 ticker | 3D ticker, 3D照片滚动墙 |
+| `remotion-vinyl-player` | 黑胶唱片/音乐播放器视频组件 | vinyl player, 黑胶唱片, 音乐播放器 |
+| `ruler-progress-render` | 尺子进度条动画渲染 | ruler progress, 尺子进度动画 |
+| `wechat-2d-render` | 微信风格聊天动效视频渲染 | WeChat 2D, 微信聊天动画 |
 | `contribute-catalog` | 向公共 HyperFrames catalog 贡献组件 | upstream catalog, public registry |
 
 ## 7. Animation And Rendering / 动画与渲染
@@ -122,12 +129,15 @@ Use when the request is specifically about animation libraries, deterministic re
 | `gsap-performance` | 优化动画卡顿和 FPS | jank, 60fps, layout thrashing |
 | `gsap-utils` | GSAP 工具函数 | clamp, mapRange, snap |
 | `three` | Three.js/WebGL 场景 | 3D, WebGL, camera |
+| `threejs-earth-render` | Three.js 地球航线/飞线动画渲染 | Three.js Earth, 三维地球航线, 地球飞线 |
 | `typegpu` | TypeGPU/WebGPU/WGSL | WebGPU, shader, particles |
 | `lottie` | Lottie/dotLottie 动画 | lottie-web, After Effects |
 | `animejs` | Anime.js 时间线和动画 | Anime.js timeline |
 | `css-animations` | CSS keyframes 和纯 CSS 动画 | keyframes, CSS motion |
 | `waapi` | Web Animations API | element.animate, KeyframeEffect |
 | `tailwind` | HyperFrames 中的 Tailwind v4 | Tailwind v4, utility classes |
+| `light-spotlight-render` | 聚光灯扫字/发光文字揭示 HTML 动画 | spotlight text reveal, 聚光灯扫字 |
+| `svg-assembly-animator` | SVG 零件组装动画和透明序列帧导出 | SVG assembly, SVG组装动画 |
 
 ## 8. System And OpenAI / 系统与 OpenAI
 
