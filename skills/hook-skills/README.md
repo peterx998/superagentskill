@@ -11,7 +11,7 @@
 - `docs/02_human_trigger_matrix.md`：人性按钮矩阵
 - `docs/03_hook_generation_sop.md`：Hook 生成 SOP
 - `docs/04_hook_patterns_library.md`：Hook 句式库
-- `docs/05_drpen_beauty_hook_playbook.md`：Dr. Pen / 护肤美容场景 Hook 玩法
+- `docs/05_beauty_microneedling_hook_playbook.md`：护肤美容 / 居家微针场景 Hook 玩法
 - `docs/06_compliance_claim_risk.md`：合规与风险检查
 - `templates/`：批量生成、审核、UGC 脚本模板
 - `data/`：CSV 模板库和评分表
