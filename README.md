@@ -30,6 +30,34 @@ Use it when you want to:
 - Keep skill metadata searchable, reviewable, and safe for public release.
 - Give contributors a clear structure for new skills, examples, validation, security review, and catalog rebuilds.
 
+The repository is structured like a maintainable open-source project, not a local backup dump:
+
+| Area | What it contains | Why it matters |
+|---|---|---|
+| `.github/` | Issue forms, PR template, and CI workflow. | Standardizes bug reports, feature requests, skill requests, and pull request review. CI installs Python 3.11, checks script syntax, and runs repository validation. |
+| `catalog/` | Generated search indexes: Markdown, JSON, JSONL, CSV, and SQLite. | Lets Codex and local scripts search skills by description, keywords, category, and Chinese trigger phrases instead of relying on memorized skill names. |
+| `docs/` | Architecture, classification, routing policy, usage guide, and public release checklist. | Explains how skills are organized, how routing works, and what must be checked before public release. |
+| `examples/` | Generic workflow examples for skill routing, catalog rebuilds, and local restore. | Shows executable usage patterns without pretending to include real private results. |
+| `integrations/` | README-only notes for Codex, Cursor, Claude Code, and Gemini CLI. | Keeps current support and future plans separate: Codex is supported first; other targets are planned until converters are tested. |
+| `scripts/` | Catalog build, natural-language query, description sync, and validation scripts. | Makes maintenance repeatable and CI-friendly instead of manual. |
+| Top-level files | README, CONTRIBUTING, SECURITY, LICENSE, CHANGELOG, CODE_OF_CONDUCT, `.gitattributes`. | Provides the baseline governance expected from a public repository. |
+
+### Catalog Source Policy
+
+The public catalog is intended to be **repo-source only** by default. That means generated records should come from skill folders committed under `skills/`, not from a maintainer's local Codex directory or plugin cache.
+
+Earlier private catalogs may contain more records because they include local installed skills and plugin-cache skills. Those records are useful for a private workstation, but they can also expose local paths, private plugin cache details, or machine-specific metadata. For a public release, keep `catalog/` clean and reproducible from repository sources unless there is a deliberate reason to publish additional skill sources.
+
+Before merging catalog changes, check:
+
+```powershell
+python scripts/validate_repo.py
+git diff main...chore/open-source-repo-structure --stat
+git diff --stat main...chore/open-source-repo-structure -- catalog/
+```
+
+If you want to preserve a private expanded catalog with local/plugin-cache records, keep that version outside the public PR or regenerate it locally after merging.
+
 ## 中文介绍
 
 `superagentSkills` 是一个面向 Codex 的生产级 skills 库，目标不是简单堆放提示词，而是把本地 AI 编程工作流做成可检索、可恢复、可维护、可贡献的工程化资产。用户只需要用自然语言描述任务，Codex 就可以通过 catalog、routing policy、分类文档和 `SKILL.md` 内容，判断应该使用哪个 skill。
@@ -59,6 +87,32 @@ Use it when you want to:
 3. 用 `docs/ROUTING_POLICY.md` 和 `docs/CLASSIFICATION.md` 明确路由规则和分类边界。
 4. 增删改 skill 后运行 `scripts/build_skill_catalog.py` 重建 catalog。
 5. 发布前运行 `scripts/validate_repo.py`，并按 `docs/PUBLIC_RELEASE_CHECKLIST.md` 检查安全、隐私、许可证和示例内容。
+
+这套结构把仓库从“本地备份型 skills 仓库”整理成更接近正式开源项目的形态：
+
+| 区域 | 内容 | 作用 |
+|---|---|---|
+| `.github/` | Issue 模板、PR 模板、CI。 | 让 bug、功能建议、skill 请求和 PR 审查有固定格式；CI 会安装 Python 3.11、检查脚本语法并运行仓库校验。 |
+| `catalog/` | `category_index.md`、`keyword_index.json`、`skills.json`、`skills.jsonl`、`skills.csv`、`skills.sqlite`。 | 给脚本和 Codex 做自然语言检索，用 description、keywords、zh_triggers、category、search_text 匹配用户请求。 |
+| `docs/` | 架构、分类、路由策略、使用说明、公开前检查表。 | 把项目结构、路由规则、维护流程和公开发布风险拆开写清楚。 |
+| `examples/` | skill routing、catalog rebuild、local restore 三个流程示例。 | 让新用户不用读完整仓库，也能知道怎么执行。 |
+| `integrations/` | Codex、Cursor、Claude Code、Gemini CLI 的适配说明。 | 明确当前 Codex 优先支持，其他工具是 planned，避免公开时过度承诺。 |
+| `scripts/` | `build_skill_catalog.py`、`query_skills.py`、`sync_skill_descriptions.py`、`validate_repo.py`。 | 让 catalog 构建、检索、同步和公开发布校验变成可重复流程。 |
+| 顶层文件 | README、贡献指南、安全策略、MIT License、变更记录、行为规范、换行规则。 | 补齐公开仓库需要的基础治理文件。 |
+
+### Catalog 公开边界
+
+公开版 `catalog/` 默认应该只记录仓库内的 skills 来源。以前私有版本可能有 143 条记录，是因为同时扫描了本机已安装 skills 和 plugin-cache；当前公开整理后的 catalog 可能只有仓库来源记录，例如 50 条。这不是普通意义上的数据丢失，而是为了避免把本机路径、plugin-cache、私有 skill 或机器特定信息带进公开 PR。
+
+合并前建议重点检查：
+
+```powershell
+python scripts/validate_repo.py
+git diff main...chore/open-source-repo-structure --stat
+git diff --stat main...chore/open-source-repo-structure -- catalog/
+```
+
+如果你想保留包含本机和 plugin-cache 的私有 catalog，不要把那份 catalog 数据合并进公开分支；可以在合并后本地重新生成。
 
 ## What Is This?
 
