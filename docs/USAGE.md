@@ -9,7 +9,7 @@ EN: This guide explains how to install, search, rebuild, and maintain the skills
 Copy a skill folder from this repository:
 
 ```powershell
-Copy-Item -Recurse .\skills\systematic-debugging C:\Users\LENOVO\.codex\skills\systematic-debugging
+Copy-Item -Recurse .\skills\systematic-debugging "$env:USERPROFILE\.codex\skills\systematic-debugging"
 ```
 
 中文：把 `skills/` 下的某个 skill 文件夹复制到本机 Codex skills 目录。
@@ -38,18 +38,18 @@ When the user does not name a skill, start with intent:
 
 ## 3. Search By Natural Language / 自然语言检索
 
-Use the bundled Python runtime:
+Use Python 3.11 or newer:
 
 ```powershell
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\query_skills.py 'MCP 安全 提示注入 工具调用日志 审计'
+python scripts\query_skills.py "MCP 安全 提示注入 工具调用日志 审计"
 ```
 
 More examples:
 
 ```powershell
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\query_skills.py '报错 跑不起来 帮我排查根因'
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\query_skills.py '做短视频广告开头 UGC first line'
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\query_skills.py '把这个网址做成产品宣传视频 加字幕和配音'
+python scripts\query_skills.py "报错 跑不起来 帮我排查根因"
+python scripts\query_skills.py "做短视频广告开头 UGC first line"
+python scripts\query_skills.py "把这个网址做成产品宣传视频 加字幕和配音"
 ```
 
 中文：脚本会读取 `catalog/skills.sqlite` 和 `catalog/skills.json`，结合全文检索、关键词、中文触发词和专属触发短语排序。
@@ -59,14 +59,14 @@ More examples:
 Run:
 
 ```powershell
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\build_skill_catalog.py
+python scripts\build_skill_catalog.py
 ```
 
 It scans:
 
 - repository skills under `skills/`
-- local installed skills under `C:\Users\LENOVO\.codex\skills`
-- plugin-cache skills under `C:\Users\LENOVO\.codex\plugins\cache`
+- local installed skills under `<user-home>/.codex/skills`
+- plugin-cache skills under `<user-home>/.codex/plugins/cache`
 
 中文：重建会扫描仓库、本机已安装 skills、插件缓存，并生成 `catalog/` 下的 JSON/CSV/SQLite/Markdown 索引。
 
@@ -75,7 +75,7 @@ It scans:
 Run:
 
 ```powershell
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\sync_skill_descriptions.py
+python scripts\sync_skill_descriptions.py
 ```
 
 中文：这个脚本会把本机已优化的 `description` 同步到仓库内同名 skill。适合本地先调好触发词，再回写仓库。
