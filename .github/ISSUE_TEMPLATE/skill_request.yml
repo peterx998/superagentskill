@@ -1,0 +1,36 @@
+name: Skill request
+description: Request a new skill or skill category.
+title: "[Skill]: "
+labels: ["skill-request"]
+body:
+  - type: input
+    id: skill_name
+    attributes:
+      label: Proposed skill name or category
+      placeholder: e.g. api-contract-review
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What user request should trigger this skill?
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Trigger phrases
+      description: Include English and Chinese phrases if useful.
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: What should the skill guide Codex to do?
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This request does not require secrets, private data, or copied copyrighted content.
+          required: true

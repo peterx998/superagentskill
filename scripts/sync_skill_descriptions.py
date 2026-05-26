@@ -1,10 +1,11 @@
+import os
 import re
 from pathlib import Path
 
 
 REPO = Path(__file__).resolve().parents[1]
 REPO_SKILLS = REPO / "skills"
-LOCAL_SKILLS = Path(r"C:\Users\LENOVO\.codex\skills")
+LOCAL_SKILLS = Path(os.environ.get("CODEX_SKILLS_DIR", Path.home() / ".codex" / "skills"))
 
 
 def read(path: Path) -> str:
@@ -39,6 +40,11 @@ def replace_description(frontmatter: str, description: str) -> str:
 
 
 def main() -> int:
+    if not LOCAL_SKILLS.exists():
+        print(f"local skills directory not found: {LOCAL_SKILLS}")
+        print("Set CODEX_SKILLS_DIR to the directory that contains local Codex skill folders.")
+        return 0
+
     local_by_folder = {}
     for path in LOCAL_SKILLS.rglob("SKILL.md"):
         local_by_folder[path.parent.name] = path

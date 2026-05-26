@@ -1,83 +1,135 @@
 # superagentSkills
 
-EN: A private, searchable Codex skills library for faster natural-language routing, safer skill selection, and easier restoration of local Codex skills.
+A searchable Codex skills library for routing, restoring, and maintaining local AI coding skills.
 
-中文：这是一个私有的 Codex skills 资料库，目标是让代理能通过自然语言快速判断该调用哪个 skill，而不是等用户记住并点名 skill。
+一个面向 Codex 的可检索 skills 库，用于技能路由、本地恢复和技能维护。
 
-Inspired by the agency-style directory pattern: one clear entrypoint, a categorized roster, quick-start commands, and short role/use-case descriptions.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Status: Private Preview](https://img.shields.io/badge/Status-Private%20Preview-orange.svg)
 
-## What This Repository Contains / 这个仓库包含什么
+## What Is This?
 
-- `skills/`: installable Codex skill folders.
-- `skills/skill-router/`: the main routing skill for choosing the right skill automatically.
-- `catalog/`: generated search database and indexes.
-- `docs/CLASSIFICATION.md`: bilingual skill category map.
-- `docs/USAGE.md`: bilingual installation, query, update, and routing guide.
-- `docs/skill-routing-policy.md`: routing policy and tie breakers.
-- `scripts/query_skills.py`: local natural-language skill search.
-- `scripts/build_skill_catalog.py`: rebuilds the catalog from repo, local, and plugin-cache skills.
-- `scripts/sync_skill_descriptions.py`: syncs optimized trigger descriptions from local installed skills.
+`superagentSkills` is a practical Codex skills library. It keeps installable skill folders, a generated search catalog, routing policy notes, and small maintenance scripts in one repository.
 
-## Quick Start / 快速开始
+The goal is simple: describe a task in natural language, find the right skill, and restore or maintain that skill locally without relying on memory of exact folder names.
 
-Search by natural language:
+## Why This Exists?
+
+Codex skills are most useful when their trigger descriptions are easy to discover. As the number of local skills grows, manual selection becomes brittle: names overlap, categories blur, and useful skills can sit unused.
+
+This repository gives the collection a public-ready structure:
+
+- searchable catalog files under `catalog/`
+- installable skill folders under `skills/`
+- bilingual routing and usage docs under `docs/`
+- repeatable scripts under `scripts/`
+- safe examples and integration notes for future adapters
+
+## Repository Structure
+
+| Path | Purpose |
+|---|---|
+| `skills/` | Installable Codex skill folders. Each installable skill should contain `SKILL.md`. |
+| `catalog/` | Generated JSON, JSONL, CSV, Markdown, and SQLite indexes for search and routing. |
+| `scripts/` | Local maintenance scripts for catalog rebuilds, querying, description sync, and validation. |
+| `docs/` | Human-readable architecture, classification, routing, usage, and release docs. |
+| `examples/` | Generic workflow examples that show structure without private results. |
+| `integrations/` | README-only integration notes for Codex and planned external targets. |
+| `.github/` | Pull request template, issue forms, and lightweight CI. |
+
+## Quick Start
+
+### Search by natural language
 
 ```powershell
-& 'C:\Users\LENOVO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts\query_skills.py '报错 跑不起来 帮我排查'
+python scripts/query_skills.py "报错 跑不起来 帮我排查根因"
 ```
 
-Example results:
+The query script reads the generated catalog and returns likely skills for the request.
 
-- `报错 跑不起来 帮我排查` -> `systematic-debugging`
-- `把这个网址做成产品宣传视频 加字幕和配音` -> `website-to-hyperframes`, then `hyperframes-media`
-- `MCP 安全 提示注入 工具调用日志 审计` -> `agent-runtime-lab`
-- `做短视频广告开头 UGC first line` -> `hook-skills`
+### Rebuild catalog
 
-## Recommended First Skill / 推荐优先入口
+```powershell
+python scripts/build_skill_catalog.py
+```
 
-Use `skill-router` when the user does not remember skill names.
+Run this after adding, removing, renaming, or materially changing skill metadata.
 
-中文：如果用户只是自然描述需求，例如“这个项目跑不起来”、“把网页做成视频”、“整理 Obsidian 笔记”，先让 `skill-router` 判断类别，再读取最具体的 skill。
+### Restore skills locally
 
-## Skill Roster / Skills 分类
+```powershell
+Copy-Item -Recurse .\skills\systematic-debugging "$env:USERPROFILE\.codex\skills\systematic-debugging"
+```
 
-| Category | 中文分类 | Use for | Skills |
+Restart Codex or open a new session after restoring a skill so the runtime can rescan local skills.
+
+## Skill Categories / Roster
+
+This roster is generated from the existing classification docs and README content. See [docs/CLASSIFICATION.md](docs/CLASSIFICATION.md) for the fuller bilingual category map.
+
+| Category | 中文分类 | Use for | Key skills |
 |---|---|---|---|
-| Routing and planning | 路由、规划与执行 | Choosing skills, planning work, executing approved plans | `skill-router`, `using-superpowers`, `brainstorming`, `superpowers-gated-planning`, `writing-plans`, `executing-plans`, `subagent-driven-development`, `dispatching-parallel-agents`, `using-git-worktrees`, `finishing-a-development-branch` |
-| Debugging and code quality | 调试、代码质量与验收 | Broken behavior, tests, reviews, verification | `systematic-debugging`, `test-driven-development`, `karpathy-guidelines`, `receiving-code-review`, `requesting-code-review`, `verification-before-completion` |
-| Skill management | Skill 创建、安装与维护 | Creating, installing, packaging, improving, and indexing skills | `writing-skills`, `skill-creator`, `skill-installer`, `plugin-creator`, `local-skill-enhanced` |
-| Agent runtime and safety | Agent 运行时与安全 | MCP, prompt injection, runtime logs, shell hooks, policy checks | `agent-runtime-lab` |
-| Content and knowledge | 内容、营销与知识库 | Hooks, UGC scripts, Obsidian, knowledge workflows, specialist agents | `hook-skills`, `obsidian-llm-wiki-skill`, `agency-agents` |
-| HyperFrames video | HyperFrames 视频制作 | HTML video, captions, voiceover, website-to-video, registry blocks | `hyperframes`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `website-to-hyperframes`, `remotion-to-hyperframes`, `contribute-catalog` |
-| Animation and rendering | 动画与渲染 | GSAP, Three.js, WebGPU, Lottie, Anime.js, CSS and WAAPI animation | `gsap`, `gsap-core`, `gsap-react`, `gsap-frameworks`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-plugins`, `gsap-performance`, `gsap-utils`, `three`, `typegpu`, `lottie`, `animejs`, `css-animations`, `waapi`, `tailwind` |
-| System and OpenAI | 系统与 OpenAI | Image generation, OpenAI docs, system skill support | `imagegen`, `openai-docs` |
+| Routing, Planning, and Execution | 路由、规划与执行 | Choosing skills, planning implementation, splitting work, executing approved plans, and protecting workspace state. | `skill-router`, `using-superpowers`, `brainstorming`, `writing-plans`, `executing-plans`, `subagent-driven-development`, `dispatching-parallel-agents`, `using-git-worktrees` |
+| Debugging, Code Quality, and Verification | 调试、代码质量与验收 | Broken behavior, failing tests, code review, risk checks, and proof that work is complete. | `systematic-debugging`, `test-driven-development`, `karpathy-guidelines`, `receiving-code-review`, `requesting-code-review`, `verification-before-completion` |
+| Skill Management | Skill 创建、安装与维护 | Creating, installing, packaging, improving, indexing, and maintaining Codex skills. | `writing-skills`, `skill-creator`, `skill-installer`, `plugin-creator`, `local-skill-enhanced` |
+| Agent Runtime and Safety | Agent 运行时与安全 | MCP, prompt injection, runtime behavior, shell/tool safety, and security-oriented checks. | `agent-runtime-lab` |
+| Content, Marketing, and Knowledge Work | 内容、营销与知识库 | Hooks, UGC scripts, specialist roles, Obsidian notes, and knowledge workflows. | `hook-skills`, `obsidian-llm-wiki-skill`, `agency-agents` |
+| HyperFrames Video | HyperFrames 视频制作 | HTML video, captions, voiceover, website-to-video, registry components, and Remotion migration. | `hyperframes`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `website-to-hyperframes`, `remotion-to-hyperframes`, `contribute-catalog` |
+| Animation and Rendering | 动画与渲染 | GSAP, Three.js, WebGPU, Lottie, Anime.js, CSS animation, WAAPI, and motion performance. | `gsap`, `gsap-core`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-plugins`, `gsap-performance`, `three`, `typegpu`, `lottie`, `animejs`, `css-animations`, `waapi`, `tailwind` |
+| System and OpenAI | 系统与 OpenAI | System-level image generation and OpenAI docs/API guidance. | `imagegen`, `openai-docs` |
 
-See [docs/CLASSIFICATION.md](docs/CLASSIFICATION.md) for the full bilingual category map.
+## Usage with Codex
 
-See [docs/USAGE.md](docs/USAGE.md) for bilingual installation, search, rebuild, and maintenance instructions.
+Use `skill-router` when the user describes a task but does not remember a skill name. Route by intent, symptom, tool, file type, desired output, and Chinese trigger phrases.
 
-## Routing Rule / 调用规则
+Recommended flow:
 
-1. Match the user request by intent, symptom, tool, file type, desired output, and Chinese trigger words.
-2. Prefer process skills first when the task involves planning, debugging, implementation, review, or verification.
-3. Then use the most specific domain skill.
-4. Prefer repository skills over duplicated local/plugin-cache copies.
-5. If no skill matches strongly, continue normally and add the missing trigger later.
+1. Search the catalog with the user's natural-language request.
+2. Read the most specific matching `SKILL.md`.
+3. Prefer process skills first for planning, debugging, implementation, review, or verification.
+4. Prefer the narrowest domain skill once the workflow type is clear.
+5. Restore missing local skills from `skills/` when needed.
 
-## Catalog Files / 检索数据库
+## Integrations
 
-- `catalog/skills.sqlite`: SQLite FTS5 search database.
-- `catalog/skills.json`: full database, including repo, local, and plugin-cache sources.
-- `catalog/preferred-skills.json`: de-duplicated best source for each skill name.
-- `catalog/keyword_index.json`: keyword-to-skill id index.
-- `catalog/category_index.md`: generated category index.
+Codex is the primary target. Other assistant environments are tracked as planned integration notes only.
 
-## Restore / 恢复到本地 Codex
+| Target | Status | Notes |
+|---|---|---|
+| Codex | Supported | Skills can be restored manually into the local Codex skills directory. |
+| Cursor | Planned | Future converter may map skill descriptions into Cursor rules or docs. |
+| Claude Code | Planned | Future converter may map selected guidance into `CLAUDE.md` style project memory. |
+| Gemini CLI | Planned | Future converter may map selected skills into Gemini-compatible local guidance. |
 
-Copy a folder from `skills/` into:
+See [integrations/README.md](integrations/README.md).
 
-```powershell
-C:\Users\LENOVO\.codex\skills
-```
+## Examples
 
-Then restart Codex or open a new session so the runtime rescans skills.
+- [Skill routing workflow](examples/workflow-skill-routing.md)
+- [Catalog rebuild workflow](examples/workflow-catalog-rebuild.md)
+- [Local restore workflow](examples/workflow-local-restore.md)
+
+## Contributing
+
+Contributions are welcome when they improve the library without introducing private data, unsafe scripts, or copied copyrighted content. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Useful contribution types include new skills, better trigger descriptions, routing improvements, catalog/search fixes, examples, and documentation updates.
+
+## Security
+
+Treat skills as executable operating instructions for agents. Review them for prompt injection, unsafe shell suggestions, secret leakage, malicious install scripts, path traversal, and unsafe network calls.
+
+Report security concerns through GitHub private vulnerability reporting if enabled. Otherwise open a minimal public issue without secrets. See [SECURITY.md](SECURITY.md).
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
+
+## Roadmap
+
+- Keep the public-release documentation complete and honest.
+- Improve catalog validation without requiring private local cache files.
+- Add safer examples for common Chinese and English routing flows.
+- Document a repeatable skill review process.
+- Explore README-only integration plans before implementing converters.
