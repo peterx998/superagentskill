@@ -1,8 +1,8 @@
 # Superagent Skills Catalog
 
-Generated: `2026-05-26T15:01:09.405501+00:00`
-Total records: `60`
-Unique skill names: `60`
+Generated: `2026-05-28T03:30:41.762777+00:00`
+Total records: `61`
+Unique skill names: `61`
 
 ## How Matching Works
 
@@ -69,6 +69,8 @@ LIMIT 8;
 - `hook-skills` (repository): Use when the user asks for short-video hooks, TikTok, Reels, Shorts, UGC scripts, ad openings, first lines, first-three-seconds optimization, landing-page hooks, SEO intros, GEO intros, curiosity-gap copy, pain-point angles, or product feature hooks.
   - 中文触发: 短视频hook, 广告开头, UGC脚本, 知识库, 双链笔记, Obsidian
 - `obsidian-llm-wiki-builder` (repository): Use when the user asks to organize Obsidian notes, personal knowledge management, LLM-assisted reading notes, wiki links, tags, templates, indexes, evergreen notes, vault structure, note cleanup, or knowledge workflows.
+  - 中文触发: 短视频hook, 广告开头, UGC脚本, 知识库, 双链笔记, Obsidian
+- `skill-router-seo-geo` (repository): Use when routing SEO, GEO, AI search, independent-site content, keyword scoring, product decision pages, FAQ strategy, Dr. Pen, microneedling, cartridge, official store, review page, comparison page, authenticity, aftercare, needle depth, Shopify landing page, hook, UGC, Obsidian knowledge-base, PDF manual extraction, or presentation strategy requests to the right local skill or knowledge workflow.
   - 中文触发: 短视频hook, 广告开头, UGC脚本, 知识库, 双链笔记, Obsidian
 
 ### debugging-code-quality
