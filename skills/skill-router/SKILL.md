@@ -51,6 +51,7 @@ Process skills come before domain skills:
 
 ### Content And Knowledge Work
 
+- `skill-router-seo-geo`: SEO/GEO, AI search, Dr. Pen, microneedling, cartridge, official-store, hook, and knowledge-base routing.
 - `hook-skills`: short-video hooks, ad openings, UGC, SEO/GEO intros, pain angles.
 - `obsidian-llm-wiki-skill`: Obsidian notes, wiki links, tags, templates, knowledge workflows.
 - `agency-agents`: role-based expert agents and specialist personas.
@@ -91,6 +92,7 @@ Process skills come before domain skills:
 - "写计划", "按计划执行": `writing-plans` or `executing-plans`
 - "帮我 review", "处理 review comments": `requesting-code-review` or `receiving-code-review`
 - "做短视频 hook", "广告开头", "UGC 脚本": `hook-skills`
+- "SEO文章", "GEO", "AI搜索", "Dr Pen", "microneedling", "cartridge", "official store": `skill-router-seo-geo`
 - "整理 Obsidian", "知识库", "双链笔记": `obsidian-llm-wiki-skill`
 - "做视频", "HyperFrames", "字幕", "配音": `hyperframes`
 - "这个网址做成视频": `website-to-hyperframes`

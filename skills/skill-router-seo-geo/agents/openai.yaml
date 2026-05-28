@@ -1,0 +1,3 @@
+display_name: SEO/GEO Skill Router
+short_description: Route SEO, GEO, keyword, Dr. Pen, hook, and knowledge-base requests to the right skill workflow.
+default_prompt: Decide which SEO/GEO, Dr. Pen, hook, or knowledge-base skill should handle this request before drafting content.
